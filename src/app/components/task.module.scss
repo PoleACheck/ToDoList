@@ -1,0 +1,108 @@
+$bg-dark: #222;
+$bg-input: #333;
+$text-light: #fff;
+$text-dark: #222;
+$border: #444;
+$accent: orange;
+$accent-hover: #ff9800;
+$success: #4caf50;
+$del-color: #e53935;
+
+.task {
+  background: $bg-dark;
+  color: $text-light;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  padding: 1.5rem;
+  margin: 1rem auto;
+  width: 75vw;
+  max-width: 900px;
+  border: 1px solid $border;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    flex: 1;
+  }
+
+  .title, .description {
+    transition: color 0.3s, text-decoration 0.3s;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $accent;
+    margin-bottom: 0.5rem;
+    &.completed {
+      color: $success;
+      text-decoration: line-through;
+    }
+  }
+
+  .description {
+    font-size: 1rem;
+    color: $text-light;
+    word-break: break-word;
+    &.completed {
+      color: $success;
+      text-decoration: line-through;
+    }
+  }
+
+  .status {
+    font-size: 0.9rem;
+    color: $accent;
+    margin-top: 0.5rem;
+    transition: color 0.3s;
+    &.completed {
+      color: $success;
+    }
+  }
+
+  .completeBtn {
+    background: none;
+    border: 2px solid $accent;
+    color: $accent;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: border-color 0.3s, color 0.3s;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.completed {
+      border-color: $success;
+      color: $success;
+    }
+  }
+
+  .deleteBtn {
+    background: $del-color;
+    color: $text-light;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    &:hover {
+      background: darken($del-color, 10%);
+    }
+  }
+}
