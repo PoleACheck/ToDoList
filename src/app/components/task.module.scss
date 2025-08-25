@@ -101,7 +101,7 @@ $del-color: #e53935;
     justify-content: center;
     transition: background 0.2s;
     &:hover {
-      background: color.adjust($del-color, $lightness: -10%)
+      background: darken($del-color, 10%);
     }
   }
 }
