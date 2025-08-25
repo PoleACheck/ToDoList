@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import styles from "./page.module.scss";
 import { Task } from "./components/Task";
 import { SingleTask } from "./types";

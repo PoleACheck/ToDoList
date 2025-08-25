@@ -43,7 +43,6 @@ $del-color: #e53935;
     margin-bottom: 0.5rem;
     &.completed {
       color: $success;
-      text-decoration: line-through;
     }
   }
 
@@ -102,7 +101,7 @@ $del-color: #e53935;
     justify-content: center;
     transition: background 0.2s;
     &:hover {
-      background: darken($del-color, 10%);
+      background: color.adjust($del-color, $lightness: -10%)
     }
   }
 }
